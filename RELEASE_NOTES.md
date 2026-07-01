@@ -12,7 +12,7 @@
 * Streamlined cleanup after rendering and unmounting to reduce retained references and lower the risk of memory growth over time.
 * Strengthened workflow security and consistency by pinning automation actions to specific trusted versions.
 * Expanded server rendered loading support so delayed content can attach more reliably as streamed content arrives.
-* Stabilized follow up updates so pending subtree and sibling effects flush reliably when rerenders occur before after paint processing.
+* Stabilized follow up updates so pending subtree and sibling work flushes reliably when rerenders occur before deferred screen updates run.
 * Balanced generated IDs across async loading boundaries so rendered output stays consistent even when content resolves in different orders.
 * Restored recovery from failed partial renders so interrupted content cleans up safely and avoids later crashes.
 * Consolidated a bundle of rendering recovery fixes so this release keeps stability improvements aligned across supported release lines.
