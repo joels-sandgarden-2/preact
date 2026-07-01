@@ -101,6 +101,14 @@ const App = () => {
 render(<App />, document.body);
 ```
 
+## Latest release highlights
+
+- Hydration now resumes streamed Suspense boundaries that use server rendered markers when deferred content arrives later, and it keeps existing DOM in place without unnecessary extra work.
+- Hydration recovery now handles missing expected DOM children more safely, and it cleans up failed partial subtrees more reliably to avoid crashes during recovery.
+- Suspense now keeps `useId` values stable across async resolution order, including nested boundaries, so server rendering and client hydration stay aligned more reliably.
+- Preact now flushes pending subtree and sibling effects consistently when a component re-renders before after paint processing runs, so effects do not wait for a later flush.
+- Hooks and runtime cleanup now avoid redundant work during updates and release retained references more aggressively, which improves performance and reduces memory retention in long running applications.
+
 ---
 
 ## Sponsors
